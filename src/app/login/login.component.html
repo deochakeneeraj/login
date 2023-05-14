@@ -1,1 +1,18 @@
-<p>login works!</p>
+<div class="card ">
+    <div class="card-body">
+        <h5 class="card-title">Login</h5>
+        <ng-container *ngIf="!emailVerifiedCheck;" ></ng-container>
+        <div  class="card-form">
+          <div  class="login-body ">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" [formControl]="emailId" placeholder="Enter email">
+          </div>
+          <div class="button-group">
+            <a (click)="verifyEmail()" class="btn btn-success">Next</a>
+            <a (click)="navigateToRegister()" class="btn btn-primary">Register</a>
+          </div>
+        </div>
+        
+      
+    </div>
+  </div>

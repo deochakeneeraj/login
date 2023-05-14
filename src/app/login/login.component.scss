@@ -1,0 +1,41 @@
+.card{
+    width: 18rem;
+    height: 22rem;
+    padding: 5px;
+    display: flex;
+    justify-items: left;
+    justify-content: space-between;
+}
+.card-form{
+    height: 12rem;
+}
+.login-body{
+    height: auto;
+    position: relative;
+    padding: 0;
+}
+
+.login-body>label{
+    margin-bottom: 5px;
+    margin-left: 2px;
+}
+.button-group{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.button-group>.btn{
+    margin-top: 1px;
+    margin-bottom: 1px;
+    width: 100% !important;
+}
+
+.card-title{
+    text-align: center;
+}
