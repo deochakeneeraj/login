@@ -1,18 +1,41 @@
-<div class="card ">
+<div id="login" class="card ">
     <div class="card-body">
         <h5 class="card-title">Login</h5>
-        <ng-container *ngIf="!emailVerifiedCheck;" ></ng-container>
+        <ng-container *ngIf="!emailVerifiedCheck && !otpVerifiedCheck &&!passwordVerifiedCheck ;" >
         <div  class="card-form">
           <div  class="login-body ">
             <label for="email">Email</label>
             <input type="email" class="form-control" id="email" aria-describedby="emailHelp" [formControl]="emailId" placeholder="Enter email">
           </div>
           <div class="button-group">
-            <a (click)="verifyEmail()" class="btn btn-success">Next</a>
-            <a (click)="navigateToRegister()" class="btn btn-primary">Register</a>
+            <a (click)="verifyEmail()" class="btn btn-success">Generate OTP</a>
+            <a (click)="navigateToRegister()" class="btn btn-primary">New user? Register</a>
           </div>
         </div>
-        
+      </ng-container>
+      <ng-container *ngIf="emailVerifiedCheck && !otpVerifiedCheck &&!passwordVerifiedCheck ;" >
+        <div  class="card-form">
+          <div  class="login-body ">
+            <label for="otp">OTP</label>
+            <input type="text" class="form-control" id="otp" aria-describedby="emailHelp" [formControl]="otp" placeholder="Enter OTP">
+          </div>
+          <div class="button-group">
+            <a (click)="verifyOtp()" class="btn btn-success">Verify</a>
+            <a (click)="navigateToRegister()" class="btn btn-primary">New user? Register</a>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="emailVerifiedCheck && otpVerifiedCheck &&!passwordVerifiedCheck ;" >
+        <div  class="card-form">
+          <div  class="login-body ">
+            <label for="password">Enter Password</label>
+            <input type="password" class="form-control" id="password" aria-describedby="emailHelp" [formControl]="password" placeholder="Enter Password">
+          </div>
+          <div class="button-group">
+            <a (click)="login()" class="btn btn-success">Login</a>
+          </div>
+        </div>
+      </ng-container>
       
     </div>
   </div>

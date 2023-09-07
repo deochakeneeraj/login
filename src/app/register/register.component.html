@@ -1,1 +1,16 @@
-<p>register works!</p>
+<div class="card ">
+    <div class="card-body">
+        <h5 class="card-title">Register</h5>
+        <div class="card-form">
+            <div class="row">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            
+            <div class="row"><label for="username">User Name</label><input type="text" name="username" id="username"></div>
+
+            <div class="button-group"><a (click)="register()" class="btn btn-success" disabled="" value="">Register</a> <a (click)="gotoLogin()" class="btn btn-primary" disabled="" value="">Existing user? Login</a> </div>
+        </div>
+      
+    </div>
+  </div>
